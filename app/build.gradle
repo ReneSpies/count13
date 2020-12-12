@@ -1,13 +1,17 @@
 plugins {
+    
     id 'com.android.application'
     id 'kotlin-android'
+
 }
 
 android {
+
     compileSdkVersion versions.compileSdk
     buildToolsVersion "30.0.2"
 
     defaultConfig {
+
         applicationId "co.aresid.count13"
         minSdkVersion versions.minimumSdk
         targetSdkVersion versions.targetSdk
@@ -15,21 +19,39 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
+
         release {
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
+
     }
+
     compileOptions {
+
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
     }
+
     kotlinOptions {
+
         jvmTarget = '1.8'
+
     }
+
+    buildFeatures {
+
+        dataBinding true
+
+    }
+
 }
 
 dependencies {
@@ -53,8 +75,13 @@ dependencies {
     // CoordinatorLayout
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
 
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+
     testImplementation "junit:junit:4.13.1"
 
     androidTestImplementation "androidx.test.ext:junit:1.1.2"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.3.0"
+
 }
