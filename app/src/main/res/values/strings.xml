@@ -1,3 +1,4 @@
 <resources>
 	<string name="app_name">count13</string>
+    <string name="description_add_a_new_counter">Add a new counter.</string>
 </resources>
