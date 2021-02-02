@@ -14,6 +14,7 @@
             android:id="@+id/counter_list_recycler_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
             app:layout_constraintEnd_toEndOf="@id/guideline_end"
             app:layout_constraintStart_toStartOf="@id/guideline_start"
@@ -31,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="@dimen/guideline_margin_large" />
+            app:layout_constraintGuide_end="@dimen/guideline_margin_small" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_bottom"
@@ -45,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="@dimen/guideline_margin_large" />
+            app:layout_constraintGuide_begin="@dimen/guideline_margin_small" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

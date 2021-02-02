@@ -7,6 +7,7 @@
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,12 +19,26 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/navigation_graph" />
 
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.PrimarySurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            app:fabAlignmentMode="center"
+            app:fabAnimationMode="slide"
+            app:hideOnScroll="true"
+            app:menu="@menu/bottom_app_bar"
+            app:navigationIcon="@drawable/ic_round_menu_24" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="24dp"
             android:contentDescription="@string/description_add_a_new_counter"
-            android:src="@drawable/ic_round_add_24" />
+            android:src="@drawable/ic_round_add_24"
+            app:fabSize="normal"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:layout_behavior=".floatingactionbutton.HideOnScrollDownBehavior" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
