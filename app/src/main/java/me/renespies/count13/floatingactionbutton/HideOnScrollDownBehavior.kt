@@ -1,4 +1,4 @@
-package co.aresid.count13.floatingactionbutton
+package me.renespies.count13.floatingactionbutton
 
 import android.content.Context
 import android.util.AttributeSet

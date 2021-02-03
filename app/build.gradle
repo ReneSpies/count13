@@ -2,6 +2,7 @@ plugins {
     
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 
 }
 
@@ -12,7 +13,7 @@ android {
 
     defaultConfig {
 
-        applicationId "co.aresid.count13"
+        applicationId "me.renespies.count13"
         minSdkVersion versions.minimumSdk
         targetSdkVersion versions.targetSdk
         versionCode 1

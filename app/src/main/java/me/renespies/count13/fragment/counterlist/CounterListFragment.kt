@@ -1,4 +1,4 @@
-package co.aresid.count13.fragment.counterlist
+package me.renespies.count13.fragment.counterlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import co.aresid.count13.databinding.FragmentCounterListBinding
-import co.aresid.count13.recyclerview.CounterListAdapter
+import me.renespies.count13.databinding.FragmentCounterListBinding
+import me.renespies.count13.recyclerview.CounterListAdapter
 import timber.log.Timber
 
 

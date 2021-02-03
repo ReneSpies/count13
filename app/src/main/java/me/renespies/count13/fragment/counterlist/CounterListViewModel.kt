@@ -1,4 +1,4 @@
-package co.aresid.count13.fragment.counterlist
+package me.renespies.count13.fragment.counterlist
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

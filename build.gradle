@@ -6,7 +6,7 @@ buildscript {
             "minimumSdk": 21,
             "targetSdk" : 30,
             "compileSdk": 30,
-            "navigation": "2.3.2",
+            "navigation": "2.3.3",
     ]
 
     repositories {

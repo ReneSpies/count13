@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="me.renespies.count13.activity.MainActivityViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -25,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
+            app:onNavigationItemSelected="@{() -> viewModel.renderBottomNavigationSheet()}"
             app:fabAlignmentMode="center"
             app:fabAnimationMode="slide"
             app:hideOnScroll="true"
@@ -40,5 +44,6 @@
             app:fabSize="normal"
             app:layout_anchor="@id/bottom_app_bar"
             app:layout_behavior=".floatingactionbutton.HideOnScrollDownBehavior" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

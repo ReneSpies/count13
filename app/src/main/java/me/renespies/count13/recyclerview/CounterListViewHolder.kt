@@ -1,9 +1,9 @@
-package co.aresid.count13.recyclerview
+package me.renespies.count13.recyclerview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import co.aresid.count13.databinding.ItemCounterListBinding
+import me.renespies.count13.databinding.ItemCounterListBinding
 import timber.log.Timber
 
 

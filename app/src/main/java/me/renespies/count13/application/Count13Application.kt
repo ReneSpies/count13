@@ -1,4 +1,4 @@
-package co.aresid.count13.application
+package me.renespies.count13.application
 
 import android.app.Application
 import timber.log.Timber

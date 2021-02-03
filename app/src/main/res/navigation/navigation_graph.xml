@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/counterListFragment"
-        android:name="co.aresid.count13.fragment.counterlist.CounterListFragment"
+        android:name="me.renespies.count13.fragment.counterlist.CounterListFragment"
         android:label="CounterListFragment"
         tools:layout="@layout/fragment_counter_list" />
 </navigation>

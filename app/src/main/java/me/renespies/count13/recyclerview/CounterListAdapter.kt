@@ -1,4 +1,4 @@
-package co.aresid.count13.recyclerview
+package me.renespies.count13.recyclerview
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
