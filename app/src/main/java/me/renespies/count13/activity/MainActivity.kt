@@ -36,11 +36,13 @@ class MainActivity: AppCompatActivity() {
 
         }
 
-        // Set the inflated layout
-        setContentView(binding.root)
+        setContentView(binding.root) // Render the inflated layout
 
     }
 
+    /**
+     * Inflates and renders a [BottomNavigationSheetFragment].
+     */
     private fun renderBottomNavigationSheet() {
 
         Timber.d("renderBottomNavigationSheet: called")

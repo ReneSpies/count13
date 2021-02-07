@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:behavior_hideable="true"
+        app:onMenuItemSelected="@{(menuItem) -> viewModel.onMenuItemSelected(menuItem)}"
         app:layout_behavior="@string/bottom_sheet_behavior"
         app:menu="@menu/bottom_navigation_sheet" />
 </layout>
