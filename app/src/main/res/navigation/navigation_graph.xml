@@ -3,26 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/counterListFragment">
+    app:startDestination="@id/counterListFragmentDestination">
 
     <fragment
-        android:id="@+id/counterListFragment"
+        android:id="@+id/counterListFragmentDestination"
         android:name="me.renespies.count13.fragment.counterlist.CounterListFragment"
         android:label="CounterListFragment"
-        tools:layout="@layout/fragment_counter_list" />
+        tools:layout="@layout/fragment_counter_list">
+        <action
+            android:id="@+id/action_counterListFragment_to_signUpFragment3"
+            app:destination="@id/signUpFragmentDestination" />
+        <action
+            android:id="@+id/action_counterListFragment_to_settingsFragment3"
+            app:destination="@id/settingsFragmentDestination" />
+    </fragment>
     <fragment
-        android:id="@+id/bottomNavigationSheetFragment"
+        android:id="@+id/bottomNavigationSheetFragmentDestination"
         android:name="me.renespies.count13.fragment.bottomnavigationsheet.BottomNavigationSheetFragment"
         android:label="BottomNavigationSheetFragment"
-        tools:layout="@layout/fragment_bottom_navigation_sheet" />
+        tools:layout="@layout/fragment_bottom_navigation_sheet"></fragment>
     <fragment
-        android:id="@+id/settingsFragment"
+        android:id="@+id/settingsFragmentDestination"
         android:name="me.renespies.count13.fragment.settings.SettingsFragment"
         android:label="SettingsFragment"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_counterListFragment3"
+            app:destination="@id/counterListFragmentDestination" />
+    </fragment>
     <fragment
-        android:id="@+id/signUpFragment"
+        android:id="@+id/signUpFragmentDestination"
         android:name="me.renespies.count13.fragment.signup.SignUpFragment"
         android:label="SignUpFragment"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_counterListFragment3"
+            app:destination="@id/counterListFragmentDestination" />
+    </fragment>
 </navigation>
