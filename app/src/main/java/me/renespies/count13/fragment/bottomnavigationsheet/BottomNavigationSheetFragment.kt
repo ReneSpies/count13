@@ -12,14 +12,12 @@ import me.renespies.count13.R
 import me.renespies.count13.databinding.FragmentBottomNavigationSheetBinding
 import timber.log.Timber
 
-
 /**
  *    Created on: 3 Feb 2021
  *    For Project: count13
  *    Author: René Jörg Spies
  *    Copyright: © 2021 René Jörg Spies
  */
-
 
 class BottomNavigationSheetFragment : BottomSheetDialogFragment() {
 
@@ -34,7 +32,11 @@ class BottomNavigationSheetFragment : BottomSheetDialogFragment() {
 
         Timber.d("onCreateView: called")
 
-        binding = FragmentBottomNavigationSheetBinding.inflate(inflater, container, false)
+        binding = FragmentBottomNavigationSheetBinding.inflate(
+            inflater,
+            container,
+            false
+        )
 
         bottomNavigationSheetViewModel = ViewModelProvider(this).get(BottomNavigationSheetViewModel::class.java)
         binding.viewModel = bottomNavigationSheetViewModel

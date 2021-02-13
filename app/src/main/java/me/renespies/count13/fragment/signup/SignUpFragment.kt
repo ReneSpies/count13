@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import me.renespies.count13.databinding.FragmentSignUpBinding
 import timber.log.Timber
 
-
 /**
  *    Created on: 6 Feb 2021
  *    For Project: count13
@@ -17,17 +16,24 @@ import timber.log.Timber
  *    Copyright: © 2021 René Jörg Spies
  */
 
-
 class SignUpFragment : Fragment() {
 
     private lateinit var binding: FragmentSignUpBinding // Binding for the layout
     private lateinit var signUpViewModel: SignUpViewModel // Corresponding ViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         Timber.d("onCreateView: called")
 
-        binding = FragmentSignUpBinding.inflate(inflater, container, false)
+        binding = FragmentSignUpBinding.inflate(
+            inflater,
+            container,
+            false
+        )
 
         signUpViewModel = ViewModelProvider(this).get(SignUpViewModel::class.java)
         binding.viewModel = signUpViewModel

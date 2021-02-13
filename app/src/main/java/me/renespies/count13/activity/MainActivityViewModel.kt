@@ -6,7 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import timber.log.Timber
 
-
 /**
  *    Created on: 3 Feb 2021
  *    For Project: count13
@@ -14,35 +13,34 @@ import timber.log.Timber
  *    Copyright: © 2021 René Jörg Spies
  */
 
-
 class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _shouldRenderBottomNavigationSheet = MutableLiveData<Boolean>()
-    val shouldRenderBottomNavigationSheet: LiveData<Boolean>
-        get() = _shouldRenderBottomNavigationSheet
+	private val _shouldRenderBottomNavigationSheet = MutableLiveData<Boolean>()
+	val shouldRenderBottomNavigationSheet: LiveData<Boolean>
+		get() = _shouldRenderBottomNavigationSheet
 
-    init {
+	init {
 
-        Timber.d("init: called")
+		Timber.d("init: called")
 
-        loadDefaultShouldRenderBottomNavigationSheetValue()
+		loadDefaultShouldRenderBottomNavigationSheetValue()
 
-    }
+	}
 
-    private fun loadDefaultShouldRenderBottomNavigationSheetValue() {
+	private fun loadDefaultShouldRenderBottomNavigationSheetValue() {
 
-        Timber.d("loadDefaultShouldRenderBottomNavigationSheetValue: called")
+		Timber.d("loadDefaultShouldRenderBottomNavigationSheetValue: called")
 
-        _shouldRenderBottomNavigationSheet.value = false
+		_shouldRenderBottomNavigationSheet.value = false
 
-    }
+	}
 
-    fun renderBottomNavigationSheet() {
+	fun renderBottomNavigationSheet() {
 
-        Timber.d("renderBottomNavigationSheet: called")
+		Timber.d("renderBottomNavigationSheet: called")
 
-        _shouldRenderBottomNavigationSheet.value = true
+		_shouldRenderBottomNavigationSheet.value = true
 
-    }
+	}
 
 }

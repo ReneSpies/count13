@@ -1,5 +1,5 @@
 plugins {
-    
+
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
@@ -20,6 +20,16 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+
+            annotationProcessorOptions {
+
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+
+            }
+
+        }
 
     }
 
@@ -79,6 +89,24 @@ dependencies {
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+
+    // Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2-native-mt"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+
+    // Lifecycle Components
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleComponents"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycleComponents"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycleComponents"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleComponents"
+
+    // Annotation Processor
+    kapt "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycleComponents"
+
+    // Room
+    kapt "androidx.room:room-compiler:$versions.room"
+    implementation "androidx.room:room-runtime:$versions.room"
+    implementation "androidx.room:room-ktx:$versions.room"
 
     testImplementation "junit:junit:4.13.1"
 

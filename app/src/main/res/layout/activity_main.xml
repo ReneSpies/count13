@@ -28,12 +28,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            app:onNavigationItemSelected="@{() -> viewModel.renderBottomNavigationSheet()}"
             app:fabAlignmentMode="center"
             app:fabAnimationMode="slide"
             app:hideOnScroll="true"
             app:menu="@menu/bottom_app_bar"
-            app:navigationIcon="@drawable/ic_round_menu_24" />
+            app:navigationIcon="@drawable/ic_round_menu_24"
+            app:onNavigationItemSelected="@{() -> viewModel.renderBottomNavigationSheet()}" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floating_action_button"

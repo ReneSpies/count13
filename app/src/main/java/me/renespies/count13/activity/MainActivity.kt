@@ -48,7 +48,10 @@ class MainActivity: AppCompatActivity() {
         Timber.d("renderBottomNavigationSheet: called")
 
         val bottomNavigationSheetFragment = BottomNavigationSheetFragment()
-        bottomNavigationSheetFragment.show(supportFragmentManager, bottomNavigationSheetFragment.tag)
+        bottomNavigationSheetFragment.show(
+            supportFragmentManager,
+            bottomNavigationSheetFragment.tag
+        )
 
     }
 

@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/counterListFragmentDestination"
+        android:id="@id/counterListFragmentDestination"
         android:icon="@drawable/ic_round_home_24"
         android:orderInCategory="100"
         android:title="@string/home" />
 
     <item
-        android:id="@+id/signUpFragmentDestination"
+        android:id="@id/signUpFragmentDestination"
         android:icon="@drawable/ic_round_login_24"
         android:orderInCategory="101"
         android:title="@string/sign_up" />
 
     <item
-        android:id="@+id/settingsFragmentDestination"
+        android:id="@id/settingsFragmentDestination"
         android:icon="@drawable/ic_round_settings_24"
         android:orderInCategory="102"
         android:title="@string/settings" />

@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package me.renespies.count13.floatingactionbutton
 
 import android.content.Context
@@ -8,7 +10,6 @@ import androidx.core.view.ViewCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import timber.log.Timber
 
-
 /**
  *    Created on: 2 Feb 2021
  *    For Project: count13
@@ -16,11 +17,16 @@ import timber.log.Timber
  *    Copyright: © 2021 René Jörg Spies
  */
 
-
 class HideOnScrollDownBehavior : FloatingActionButton.Behavior {
 
     constructor() : super()
-    constructor(context: Context, attributeSet: AttributeSet) : super(context, attributeSet)
+    constructor(
+        context: Context,
+        attributeSet: AttributeSet
+    ) : super(
+        context,
+        attributeSet
+    )
 
     override fun onStartNestedScroll(
         coordinatorLayout: CoordinatorLayout,

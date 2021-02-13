@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import me.renespies.count13.databinding.FragmentSettingsBinding
 import timber.log.Timber
 
-
 /**
  *    Created on: 6 Feb 2021
  *    For Project: count13
@@ -17,17 +16,24 @@ import timber.log.Timber
  *    Copyright: © 2021 René Jörg Spies
  */
 
-
 class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding // Binding for the layout
     private lateinit var settingsViewModel: SettingsViewModel // Corresponding ViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         Timber.d("onCreateView: called")
 
-        binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        binding = FragmentSettingsBinding.inflate(
+            inflater,
+            container,
+            false
+        )
 
         settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
         binding.viewModel = settingsViewModel

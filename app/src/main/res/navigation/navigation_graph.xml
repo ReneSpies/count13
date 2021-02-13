@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/counterListFragmentDestination"
-        android:name="me.renespies.count13.fragment.counterlist.CounterListFragment"
+        android:name="me.renespies.count13.fragment.counternotelist.CounterNoteListFragment"
         android:label="CounterListFragment"
-        tools:layout="@layout/fragment_counter_list">
+        tools:layout="@layout/fragment_counter_note_list">
         <action
             android:id="@+id/action_counterListFragment_to_signUpFragment3"
             app:destination="@id/signUpFragmentDestination" />

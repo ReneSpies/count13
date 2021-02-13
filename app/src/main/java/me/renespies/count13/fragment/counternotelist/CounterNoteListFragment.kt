@@ -1,4 +1,4 @@
-package me.renespies.count13.fragment.counterlist
+package me.renespies.count13.fragment.counternotelist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import me.renespies.count13.databinding.FragmentCounterListBinding
+import me.renespies.count13.databinding.FragmentCounterNoteListBinding
 import me.renespies.count13.recyclerview.CounterListAdapter
 import timber.log.Timber
-
 
 /**
  *    Created on: 12/12/2020
@@ -18,14 +17,13 @@ import timber.log.Timber
  *    Copyright: © 2020 ARES ID
  */
 
-
-class CounterListFragment : Fragment() {
+class CounterNoteListFragment : Fragment() {
 
     // Binding for the layout
-    private lateinit var binding: FragmentCounterListBinding
+    private lateinit var binding: FragmentCounterNoteListBinding
 
     // Corresponding ViewModel
-    private lateinit var counterListViewModel: CounterListViewModel
+    private lateinit var counterNoteListViewModel: CounterNoteListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,10 +34,20 @@ class CounterListFragment : Fragment() {
         Timber.d("onCreateView: called")
 
         // Define the binding and inflate the layout
-        binding = FragmentCounterListBinding.inflate(inflater, container, false)
+        binding = FragmentCounterNoteListBinding.inflate(
+            inflater,
+            container,
+            false
+        )
 
         // Define the ViewModel
-        counterListViewModel = ViewModelProvider(this).get(CounterListViewModel::class.java)
+        counterNoteListViewModel = ViewModelProvider(this).get(CounterNoteListViewModel::class.java)
+
+        counterNoteListViewModel.allCounterNotes.observe(viewLifecycleOwner) {
+
+            Timber.d("allCounterNotes = $it")
+
+        }
 
         constructRecyclerView()
 
@@ -53,17 +61,17 @@ class CounterListFragment : Fragment() {
         Timber.d("constructRecyclerView: called")
 
         // Create the adapter
-        val counterListAdapter = CounterListAdapter()
+        val counterNoteListAdapter = CounterListAdapter()
 
         // Give the RecyclerView the LayoutManger, the adapter and a fixed size
-        binding.counterListRecyclerView.apply {
+        binding.counterNoteListRecyclerView.apply {
 
             // I know that my items do not change in their size
             // so I can set fixedSize to true for better performance
             setHasFixedSize(true)
 
             // Apply the adapter
-            adapter = counterListAdapter
+            adapter = counterNoteListAdapter
 
         }
 

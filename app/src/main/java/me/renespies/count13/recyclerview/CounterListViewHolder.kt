@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import me.renespies.count13.databinding.ItemCounterListBinding
 import timber.log.Timber
 
-
 /**
  *    Created on: 12/12/2020
  *    For Project: count13
@@ -14,9 +13,7 @@ import timber.log.Timber
  *    Copyright: © 2020 ARES ID
  */
 
-
-class CounterListViewHolder private constructor(val binding: ItemCounterListBinding) :
-    RecyclerView.ViewHolder(binding.root) {
+class CounterListViewHolder private constructor(val binding: ItemCounterListBinding) : RecyclerView.ViewHolder(binding.root) {
 
     companion object {
 
@@ -27,7 +24,8 @@ class CounterListViewHolder private constructor(val binding: ItemCounterListBind
             val layoutInflater = LayoutInflater.from(parent.context)
             val binding = ItemCounterListBinding.inflate(
                 layoutInflater,
-                parent, false
+                parent,
+                false
             )
 
             return CounterListViewHolder(binding)

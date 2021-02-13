@@ -4,7 +4,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import timber.log.Timber
 
-
 /**
  *    Created on: 12/12/2020
  *    For Project: count13
@@ -12,10 +11,12 @@ import timber.log.Timber
  *    Copyright: © 2020 ARES ID
  */
 
-
 class CounterListAdapter : RecyclerView.Adapter<CounterListViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CounterListViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): CounterListViewHolder {
 
         Timber.d("onCreateViewHolder: called")
 
@@ -23,7 +24,10 @@ class CounterListAdapter : RecyclerView.Adapter<CounterListViewHolder>() {
 
     }
 
-    override fun onBindViewHolder(holder: CounterListViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: CounterListViewHolder,
+        position: Int
+    ) {
 
         Timber.d("onBindViewHolder: called")
 

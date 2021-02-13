@@ -2,11 +2,13 @@
 buildscript {
 
     ext.versions = [
-            "kotlin"    : "1.4.21",
-            "minimumSdk": 21,
-            "targetSdk" : 30,
-            "compileSdk": 30,
-            "navigation": "2.3.3",
+            "kotlin"             : "1.4.30",
+            "minimumSdk"         : 21,
+            "targetSdk"          : 30,
+            "compileSdk"         : 30,
+            "navigation"         : "2.3.3",
+            "room"               : "2.3.0-beta01",
+            "lifecycleComponents": "2.2.0"
     ]
 
     repositories {
