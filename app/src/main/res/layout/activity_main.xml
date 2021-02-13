@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/description_add_a_new_counter"
             android:src="@drawable/ic_round_add_24"
+            android:onClick="@{() -> viewModel.renderAddCounterNoteDialogFragment()}"
             app:fabSize="normal"
             app:layout_anchor="@id/bottom_app_bar"
             app:layout_behavior=".floatingactionbutton.HideOnScrollDownBehavior" />

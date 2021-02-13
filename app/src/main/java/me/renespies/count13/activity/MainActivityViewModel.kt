@@ -13,34 +13,54 @@ import timber.log.Timber
  *    Copyright: © 2021 René Jörg Spies
  */
 
-class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
-
+class MainActivityViewModel(application: Application): AndroidViewModel(application) {
+	
 	private val _shouldRenderBottomNavigationSheet = MutableLiveData<Boolean>()
 	val shouldRenderBottomNavigationSheet: LiveData<Boolean>
 		get() = _shouldRenderBottomNavigationSheet
-
+	
+	private val _shouldRenderAddCounterNoteDialogFragment = MutableLiveData<Boolean>()
+	val shouldRenderAddCounterNoteDialogFragment: LiveData<Boolean>
+		get() = _shouldRenderAddCounterNoteDialogFragment
+	
 	init {
-
+		
 		Timber.d("init: called")
-
+		
 		loadDefaultShouldRenderBottomNavigationSheetValue()
-
+		
 	}
-
+	
 	private fun loadDefaultShouldRenderBottomNavigationSheetValue() {
-
+		
 		Timber.d("loadDefaultShouldRenderBottomNavigationSheetValue: called")
-
+		
 		_shouldRenderBottomNavigationSheet.value = false
-
+		
 	}
-
+	
+	private fun loadDefaultShouldRenderAddCounterNoteDialogFragmentValue() {
+		
+		Timber.d("loadDefaultShouldRenderAddCounterNoteDialogFragmentValue: called")
+		
+		_shouldRenderAddCounterNoteDialogFragment.value = false
+		
+	}
+	
 	fun renderBottomNavigationSheet() {
-
+		
 		Timber.d("renderBottomNavigationSheet: called")
-
+		
 		_shouldRenderBottomNavigationSheet.value = true
-
+		
 	}
-
+	
+	fun renderAddCounterNoteDialogFragment() {
+		
+		Timber.d("renderAddCounterNoteDialogFragment: called")
+		
+		_shouldRenderAddCounterNoteDialogFragment.value = true
+		
+	}
+	
 }
