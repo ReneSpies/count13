@@ -10,6 +10,7 @@ import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
 import me.renespies.count13.Util.AddNoteFormErrorType
 import me.renespies.count13.Util.disableButtonAndRenderLoadingSpinner
+import me.renespies.count13.Util.enableButtonAndResetCompoundDrawablesWithIntrinsicBounds
 import me.renespies.count13.Util.enableButtonAndShowCheckSignFor500Milliseconds
 import me.renespies.count13.database.counternotedata.CounterNoteData
 import me.renespies.count13.database.repository.Count13Repository
@@ -98,6 +99,8 @@ class AddCounterNoteDialogViewModel(application: Application): AndroidViewModel(
 			catch (exception: Exception) {
 				
 				Timber.e(exception)
+				
+				button.enableButtonAndResetCompoundDrawablesWithIntrinsicBounds()
 				
 				TODO("Render an error Snackbar")
 				
