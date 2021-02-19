@@ -1,11 +1,11 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
-    <color name="brandOrange">#000</color>
-    <color name="brandOrangeLight">#2c2c2c</color>
-    <color name="brandOrangeDark">#000000</color>
-    <color name="brandBlack">#7f0000</color>
-    <color name="brandBlackLight">#b53d2a</color>
-    <color name="brandBlackDark">#4e0000</color>
-    <color name="brandOrangeTextColor">#ffffff</color>
-    <color name="brandBlackTextColor">#ffffff</color>
+    <color name="brandOrange">#D76712</color>
+    <color name="brandOrangeLight">#ff9745</color>
+    <color name="brandOrangeDark">#9f3900</color>
+    <color name="brandBlack">#CCCCCC</color>
+    <color name="brandBlackLight">#ffffff</color>
+    <color name="brandBlackDark">#9b9b9b</color>
+    <color name="brandOrangeTextColor">#000000</color>
+    <color name="brandBlackTextColor">#000000</color>
 </resources>
