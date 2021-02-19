@@ -64,4 +64,26 @@ class MainActivityViewModel(application: Application): AndroidViewModel(applicat
 		
 	}
 	
+	/**
+	 * Resets the [_shouldRenderAddCounterNoteDialogFragment] LiveData value.
+	 */
+	fun addCounterNoteDialogFragmentRendered() {
+		
+		Timber.d("addCounterNoteDialogFragmentRendered: called")
+		
+		_shouldRenderAddCounterNoteDialogFragment.value = false
+		
+	}
+	
+	/**
+	 * Resets the [_shouldRenderBottomNavigationSheet] LiveData value.
+	 */
+	fun bottomNavigationSheetRendered() {
+		
+		Timber.d("bottomNavigationSheetRendered: called")
+		
+		_shouldRenderBottomNavigationSheet.value = false
+		
+	}
+	
 }
