@@ -11,14 +11,17 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/counter_note_list_recycler_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
-            app:layout_constraintEnd_toEndOf="@id/guideline_end"
-            app:layout_constraintStart_toStartOf="@id/guideline_start"
-            app:layout_constraintTop_toTopOf="@id/guideline_top" />
+	        android:id="@+id/counter_note_list_recycler_view"
+	        android:layout_width="0dp"
+	        android:layout_height="0dp"
+	        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+	        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+	        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+	        app:reverseLayout="true"
+	        app:stackFromEnd="true"
+	        app:layout_constraintStart_toStartOf="@id/guideline_start"
+	        app:layout_constraintTop_toTopOf="@id/guideline_top"
+	        />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_top"

@@ -28,6 +28,7 @@ class MainActivityViewModel(application: Application): AndroidViewModel(applicat
 		Timber.d("init: called")
 		
 		loadDefaultShouldRenderBottomNavigationSheetValue()
+		loadDefaultShouldRenderAddCounterNoteDialogFragmentValue()
 		
 	}
 	

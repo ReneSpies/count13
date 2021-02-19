@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import me.renespies.count13.databinding.FragmentCounterNoteListBinding
-import me.renespies.count13.recyclerview.CounterListAdapter
+import me.renespies.count13.recyclerview.CounterNoteListAdapter
 import timber.log.Timber
 
 /**
@@ -44,9 +44,13 @@ class CounterNoteListFragment : Fragment() {
         counterNoteListViewModel = ViewModelProvider(this).get(CounterNoteListViewModel::class.java)
 
         counterNoteListViewModel.allCounterNotes.observe(viewLifecycleOwner) {
-
-            Timber.d("allCounterNotes = $it")
-
+	
+	        it?.let {
+		
+		        binding.counterNoteListRecyclerView.adapter = CounterNoteListAdapter(it)
+		
+	        }
+	
         }
 
         constructRecyclerView()
@@ -61,7 +65,7 @@ class CounterNoteListFragment : Fragment() {
         Timber.d("constructRecyclerView: called")
 
         // Create the adapter
-        val counterNoteListAdapter = CounterListAdapter()
+	    val counterNoteListAdapter = CounterNoteListAdapter(listOf())
 
         // Give the RecyclerView the LayoutManger, the adapter and a fixed size
         binding.counterNoteListRecyclerView.apply {

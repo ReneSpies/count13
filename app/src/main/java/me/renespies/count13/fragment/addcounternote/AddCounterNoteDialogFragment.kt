@@ -74,12 +74,4 @@ class AddCounterNoteDialogFragment: DialogFragment() {
 		
 	}
 	
-	override fun getTheme(): Int {
-		
-		Timber.d("getTheme: called")
-		
-		return android.R.style.Theme_Material_Dialog_NoActionBar_MinWidth
-		
-	}
-	
 }

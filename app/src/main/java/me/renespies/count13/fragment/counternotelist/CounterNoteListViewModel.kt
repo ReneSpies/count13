@@ -3,7 +3,6 @@ package me.renespies.count13.fragment.counternotelist
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import me.renespies.count13.database.counternotedata.CounterNoteData
 import me.renespies.count13.database.repository.Count13Repository
 import timber.log.Timber
@@ -15,22 +14,21 @@ import timber.log.Timber
  *    Copyright: © 2020 ARES ID
  */
 
-class CounterNoteListViewModel(application: Application) : AndroidViewModel(application) {
-
-	private val _allCounterNotes = MutableLiveData<List<CounterNoteData>>()
+class CounterNoteListViewModel(application: Application): AndroidViewModel(application) {
+	
 	val allCounterNotes: LiveData<List<CounterNoteData>>
-		get() = _allCounterNotes
-
-	private val repository: Count13Repository
-
+		get() {
+			
+			val repository = Count13Repository.getInstance(getApplication())
+			
+			return repository.getAllCounterNotesLiveData()
+			
+		}
+	
 	init {
-
+		
 		Timber.d("init: called")
-
-		repository = Count13Repository.getInstance(application)
-
-		_allCounterNotes.value = repository.getAllCounterNotesLiveData().value
-
+		
 	}
-
+	
 }

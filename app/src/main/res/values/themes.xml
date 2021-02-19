@@ -1,12 +1,28 @@
 <resources>
+	
+	<style name="Theme.Count13"
+	       parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="colorPrimary">@color/brandOrange</item>
+		<item name="colorPrimaryDark">@color/brandOrangeDark</item>
+		<item name="colorPrimaryVariant">@color/brandOrangeDark</item>
+		<item name="colorOnPrimary">@color/brandOrangeTextColor</item>
+		<item name="colorSecondary">@color/brandBlack</item>
+		<item name="colorSecondaryVariant">@color/brandBlackDark</item>
+		<item name="colorOnSecondary">@color/brandBlackTextColor</item>
+		<item name="android:dialogTheme">@style/Theme.Count13.DialogFragment</item>
+		<item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+	</style>
+	
+	<style name="Theme.Count13.DialogFragment"
+	       parent="Theme.Count13">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFullscreen">true</item>
+		<item name="cornerRadius">?attr/cornerRadius</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowBackground">@drawable/dialog_fragment_background</item>
+		<item name="android:windowCloseOnTouchOutside">true</item>
+		<item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+		<item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+	</style>
 
-    <style name="Theme.Count13" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/brandOrange</item>
-        <item name="colorPrimaryDark">@color/brandOrangeDark</item>
-        <item name="colorPrimaryVariant">@color/brandOrangeDark</item>
-        <item name="colorOnPrimary">@color/brandOrangeTextColor</item>
-        <item name="colorSecondary">@color/brandBlack</item>
-        <item name="colorSecondaryVariant">@color/brandBlackDark</item>
-        <item name="colorOnSecondary">@color/brandBlackTextColor</item>
-    </style>
 </resources>
