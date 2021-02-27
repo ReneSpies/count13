@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_graph"
-    app:startDestination="@id/counterListFragmentDestination">
-
-    <fragment
-        android:id="@+id/counterListFragmentDestination"
-        android:name="me.renespies.count13.fragment.counternotelist.CounterNoteListFragment"
-        android:label="CounterListFragment"
-        tools:layout="@layout/fragment_counter_note_list">
-        <action
-            android:id="@+id/action_counterListFragment_to_signUpFragment3"
-            app:destination="@id/signUpFragmentDestination" />
-        <action
-            android:id="@+id/action_counterListFragment_to_settingsFragment3"
-            app:destination="@id/settingsFragmentDestination" />
-    </fragment>
-    <fragment
-        android:id="@+id/bottomNavigationSheetFragmentDestination"
-        android:name="me.renespies.count13.fragment.bottomnavigationsheet.BottomNavigationSheetFragment"
-        android:label="BottomNavigationSheetFragment"
-        tools:layout="@layout/fragment_bottom_navigation_sheet"></fragment>
-    <fragment
-        android:id="@+id/settingsFragmentDestination"
-        android:name="me.renespies.count13.fragment.settings.SettingsFragment"
-        android:label="SettingsFragment"
-        tools:layout="@layout/fragment_settings">
-        <action
-            android:id="@+id/action_settingsFragment_to_counterListFragment3"
-            app:destination="@id/counterListFragmentDestination" />
-    </fragment>
-    <fragment
-        android:id="@+id/signUpFragmentDestination"
-        android:name="me.renespies.count13.fragment.signup.SignUpFragment"
-        android:label="SignUpFragment"
-        tools:layout="@layout/fragment_sign_up">
-        <action
-            android:id="@+id/action_signUpFragment_to_counterListFragment3"
-            app:destination="@id/counterListFragmentDestination" />
-    </fragment>
+<navigation
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/navigation_graph"
+	app:startDestination="@id/counterListFragmentDestination"
+	>
+	
+	<fragment
+		android:id="@+id/counterListFragmentDestination"
+		android:name="me.renespies.count13.fragment.counternotelist.CounterNoteListFragment"
+		android:label="CounterListFragment"
+		tools:layout="@layout/fragment_counter_note_list"
+		>
+		<action
+			android:id="@+id/action_counterListFragment_to_signUpFragment3"
+			app:destination="@id/signUpFragmentDestination"
+			/>
+		<action
+			android:id="@+id/action_counterListFragment_to_settingsFragment3"
+			app:destination="@id/settingsFragmentDestination"
+			/>
+	</fragment>
+	<fragment
+		android:id="@+id/settingsFragmentDestination"
+		android:name="me.renespies.count13.fragment.settings.SettingsFragment"
+		android:label="SettingsFragment"
+		tools:layout="@layout/fragment_settings"
+		>
+		<action
+			android:id="@+id/action_settingsFragment_to_counterListFragment3"
+			app:destination="@id/counterListFragmentDestination"
+			/>
+	</fragment>
+	<fragment
+		android:id="@+id/signUpFragmentDestination"
+		android:name="me.renespies.count13.fragment.signup.SignUpFragment"
+		android:label="SignUpFragment"
+		tools:layout="@layout/fragment_sign_up"
+		>
+		<action
+			android:id="@+id/action_signUpFragment_to_counterListFragment3"
+			app:destination="@id/counterListFragmentDestination"
+			/>
+	</fragment>
 </navigation>

@@ -65,17 +65,19 @@
 				android:id="@+id/decrement_button"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/ic_round_decrement_24"
-				app:layout_constraintBottom_toBottomOf="parent"
+				style="@style/Widget.Count13.Button.CounterButton"
+				android:src="@drawable/ic_round_decrement_36"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
 				/>
 			
 			<ImageButton
 				android:id="@+id/increment_button"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/ic_round_increment_24"
+				style="@style/Widget.Count13.Button.CounterButton"
+				android:src="@drawable/ic_round_increment_36"
 				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
