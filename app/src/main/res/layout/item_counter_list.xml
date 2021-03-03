@@ -7,7 +7,12 @@
 	<data>
 		
 		<variable
-			name="counterNote"
+			name="viewHolder"
+			type="me.renespies.count13.recyclerview.CounterNoteListViewHolder"
+			/>
+		
+		<variable
+			name="counterNoteData"
 			type="me.renespies.count13.database.counternotedata.CounterNoteData"
 			/>
 	</data>
@@ -29,7 +34,7 @@
 				style="@android:style/TextAppearance.Material.Title"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
-				android:text="@{String.valueOf(counterNote.count)}"
+				android:text="@{String.valueOf(counterNoteData.count)}"
 				android:textAlignment="center"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +46,7 @@
 				style="@android:style/TextAppearance.Material.Medium"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
-				android:text="@{counterNote.title}"
+				android:text="@{counterNoteData.title}"
 				android:textAlignment="center"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +58,7 @@
 				style="@android:style/TextAppearance.Material.Caption"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
-				android:text="@{counterNote.description.empty ? `No description` : counterNote.description}"
+				android:text="@{counterNoteData.description.empty ? `No description` : counterNoteData.description}"
 				android:textAlignment="center"
 				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -63,20 +68,22 @@
 			
 			<ImageButton
 				android:id="@+id/decrement_button"
+				style="@style/Widget.Count13.Button.CounterButton"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				style="@style/Widget.Count13.Button.CounterButton"
+				android:onClick="@{() -> viewHolder.decrementCount()}"
 				android:src="@drawable/ic_round_decrement_36"
+				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
-				app:layout_constraintBottom_toBottomOf="parent"
 				/>
 			
 			<ImageButton
 				android:id="@+id/increment_button"
+				style="@style/Widget.Count13.Button.CounterButton"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				style="@style/Widget.Count13.Button.CounterButton"
+				android:onClick="@{() -> viewHolder.incrementCount()}"
 				android:src="@drawable/ic_round_increment_36"
 				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintEnd_toEndOf="parent"

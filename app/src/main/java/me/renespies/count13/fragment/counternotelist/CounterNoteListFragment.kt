@@ -47,12 +47,12 @@ class CounterNoteListFragment : Fragment() {
 	
 	        it?.let {
 		
-		        binding.counterNoteListRecyclerView.adapter = CounterNoteListAdapter(it)
+                (binding.counterNoteListRecyclerView.adapter as CounterNoteListAdapter).setDataSet(it) // Update the adapter with the new data
 		
 	        }
 	
         }
-
+    
         constructRecyclerView()
 
         // Return the inflated layout
