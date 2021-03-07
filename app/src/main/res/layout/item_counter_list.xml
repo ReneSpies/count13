@@ -21,6 +21,9 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_margin="3.13dp"
+		android:foreground="?selectableItemBackgroundBorderless"
+		android:longClickable="true"
+		android:onClick="@{() -> viewHolder.onClick()}"
 		>
 		
 		<androidx.constraintlayout.widget.ConstraintLayout
@@ -36,8 +39,8 @@
 				android:layout_height="wrap_content"
 				android:text="@{String.valueOf(counterNoteData.count)}"
 				android:textAlignment="center"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/increment_button"
+				app:layout_constraintStart_toEndOf="@id/decrement_button"
 				app:layout_constraintTop_toTopOf="parent"
 				/>
 			
@@ -48,8 +51,8 @@
 				android:layout_height="wrap_content"
 				android:text="@{counterNoteData.title}"
 				android:textAlignment="center"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/increment_button"
+				app:layout_constraintStart_toEndOf="@id/decrement_button"
 				app:layout_constraintTop_toBottomOf="@+id/counter_text_view"
 				/>
 			
@@ -58,11 +61,14 @@
 				style="@android:style/TextAppearance.Material.Caption"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:lines="1"
+				android:singleLine="true"
 				android:text="@{counterNoteData.description.empty ? `No description` : counterNoteData.description}"
 				android:textAlignment="center"
 				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/increment_button"
+				app:layout_constraintStart_toEndOf="@id/decrement_button"
 				app:layout_constraintTop_toBottomOf="@+id/title_text_view"
 				/>
 			
